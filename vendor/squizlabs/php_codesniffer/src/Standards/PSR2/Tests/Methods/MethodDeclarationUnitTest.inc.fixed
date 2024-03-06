@@ -1,0 +1,75 @@
+<?php
+
+class MyClass
+{
+    function _myfunction () {}
+    private function myfunction () {}
+    function __myfunction () {}
+    public static function myfunction () {}
+    public static /*comment*/ function myfunction () {}
+    final public function myfunction () {}
+    final public /*comment*/ function myfunction () {}
+    abstract private function myfunction ();
+    abstract private /*comment*/ function myfunction ();
+    final public /*comment*/ static function myfunction () {}
+    abstract final protected static function myfunction ();
+    public function _() {}
+}
+
+interface MyInterface
+{
+    function _myfunction ();
+    function __myfunction ();
+    public static function myfunction ();
+    public static function myfunction ();
+    public function _();
+}
+
+trait MyTrait
+{
+    function _myfunction () {}
+    private function myfunction () {}
+    function __myfunction () {}
+    public static function myfunction () {}
+    public static function myfunction () {}
+    final /*comment*/ public function myfunction () {}
+    final public function myfunction () {}
+    abstract private function myfunction ();
+    abstract private function myfunction ();
+    final public static function myfunction () {}
+    /*comment*/ abstract final protected static function myfunction ();
+    public function _() {}
+}
+
+$a = new class()
+{
+    function _myfunction () {}
+    private function myfunction () {}
+    function __myfunction () {}
+    public static function myfunction () {}
+    public static function myfunction () {}
+    final public function myfunction () {}
+    final public function myfunction () {}
+    abstract private function myfunction ();
+    abstract private function myfunction ();
+    final public static function myfunction () {}
+    abstract final protected static function myfunction ();
+    public function _() {}
+}
+
+class Nested_Function {
+    public function getAnonymousClass() {
+        return new class() {
+			final private static function _nested_function () {}
+        };
+    }
+}
+
+enum MyEnum
+{
+    function _myfunction () {}
+    function __myfunction () {}
+    public static function myfunction () {}
+    public static function myfunction () {}
+    public function _() {}
+}

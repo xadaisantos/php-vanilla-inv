@@ -1,0 +1,23 @@
+.tabela-padrao {
+    border-collapse: collapse;
+    min-width: 800px;
+    text-align: center;
+}
+
+.tabela-padrao td, .tabela-padrao th, .tabela-padrao tr {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+select, option, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input:not([type="submit"]), select {
+    width: 100%;
+}
